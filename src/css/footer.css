@@ -13,19 +13,19 @@
 }
 
 
-.logo {
+.footer-logo {
   display: flex;
   align-items: center;
   gap: 4px;
 }
 
-.logo-icon {
+.footer-logo-icon {
   width: 16px;
   height: 16px;
   color: var(--white);
 }
 
-.logo-text-svg {
+.footer-logo-text-svg {
   height: 12px;
   width: auto;
   color: var(--white);
