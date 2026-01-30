@@ -1,5 +1,5 @@
 .footer {
-  background-color: var(--red);
+  background-color: var(--primary-brand);
   color: var(--white);
   padding: 40px 20px;
   font-family: 'Inter', sans-serif;
@@ -13,19 +13,19 @@
 }
 
 
-.logo {
+.footer-logo {
   display: flex;
   align-items: center;
   gap: 4px;
 }
 
-.logo-icon {
+.footer-logo-icon {
   width: 16px;
   height: 16px;
   color: var(--white);
 }
 
-.logo-text-svg {
+.footer-logo-text-svg {
   height: 12px;
   width: auto;
   color: var(--white);
@@ -82,7 +82,7 @@
   margin-top: 24px;
   font-size: 14px;
   font-weight: 500;
-  color: var(--pink);
+  color: var(--accent-color);
 }
 
 .footer-links {
@@ -91,7 +91,7 @@
 }
 
 .footer-links a {
-  color: var(--pink);
+  color: var(--accent-color);
   text-decoration: none;
 }
 
