@@ -1,5 +1,5 @@
 .footer {
-  background-color: var(--red);
+  background-color: var(--primary-brand);
   color: var(--white);
   padding: 40px 20px;
   font-family: 'Inter', sans-serif;
@@ -82,7 +82,7 @@
   margin-top: 24px;
   font-size: 14px;
   font-weight: 500;
-  color: var(--pink);
+  color: var(--accent-color);
 }
 
 .footer-links {
@@ -91,7 +91,7 @@
 }
 
 .footer-links a {
-  color: var(--pink);
+  color: var(--accent-color);
   text-decoration: none;
 }
 
