@@ -1,11 +1,18 @@
 :root {
-  /* Figma Renkler */
-  --primary-color: #576f35;
-  --white: #fbfbfb;
-  --black: #2e2e2e;
-  --red: #7a3145;
-  --pink: #d4bfc4;
-  --font-main: 'Inter', sans-serif;
+  /* Ana Marka Renkleri */
+  --primary-color: #576f35; /* Green Background */
+  --primary-brand: #7a3145; /* Chianti (Butonlar ve Numaralar) */
+  --accent-color: #d4bfc4; /* Blush (Hover ve Aksan) */
+
+  /* Temel Renkler */
+  --white: #fbfbfb; /* White Text */
+  --black: #141414; /* Black Text */
+  --details-grey: #858585; /* Grey (Detaylar ve Input Yazıları) */
+  --transparent-black: rgba(20, 20, 20, 0.4); /* Overlay için */
+
+  /* Input ve Bildirim Durumları */
+  --success-state: #3cbc81; /* Greenlight (Başarılı Giriş) */
+  --error-state: #e74a3b; /* Smthwrong (Hatalı Giriş) */
 
   -transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
