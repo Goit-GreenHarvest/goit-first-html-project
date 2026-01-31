@@ -1,1 +1,73 @@
-/* deneme 2*/
+
+.reviews {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: var(--white);
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+    color: var(--black);
+}
+
+
+.reviews-header {
+    margin-bottom: 40px;
+}
+
+.reviews-header h2 {
+    margin: 0 0 20px;
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 600;
+    
+}
+
+.reviews-header h2 span {
+    color: var(--primary-color);
+}
+
+.reviews-header p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--black);
+}
+
+.reviews-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.review-card {
+    padding: 20px 16px;
+    border: 1px solid #d4bfc4;
+    border-radius: 16px;
+    text-align: center;
+    background-color: var(--white);
+}
+
+.review-card picture {
+    display: inline-block;
+    margin-bottom: 24px;
+}
+
+.review-card img {
+    border-radius: 50%;
+    display: block;
+}
+
+.review-card h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: 600;
+    
+}
+
+.review-card p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.4;
+    color: var(--details-grey);
+}
