@@ -1,15 +1,13 @@
 .container {
-  /* 1. Sayfa genişliğini ve ortalamayı ayarlar */
   width: 100%;
   min-width: 320px;
-  max-width: 375px; /* Mobil sınır */
+  max-width: 375px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
 }
 
-/* 2. Tablet Geçişi (768px+) */
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
@@ -18,11 +16,10 @@
   }
 }
 
-/* 3. Desktop Geçişi (1280px+) */
 @media screen and (min-width: 1200px) {
   .container {
-    max-width: 1280px; /* Tasarımın en geniş hali */
-    padding-left: 20px; /* Figma'daki iç boşluğa göre ayarla */
+    max-width: 1280px;
+    padding-left: 20px;
     padding-right: 20px;
   }
 }
