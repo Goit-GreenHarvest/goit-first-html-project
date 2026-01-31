@@ -7,7 +7,7 @@
     align-items: center;
     top: 0;
     right: 0;
-
+    display: none;
 }
 
 .close-icon {
@@ -34,6 +34,7 @@
     text-align: center;
     color: var(--white);
     font-weight: 500;
+    white-space: nowrap;
 }
 
 .mobile-menu-item:hover {
@@ -58,8 +59,14 @@
 }
 
 .active {
-
     background-color: var(--white);
     color: var(--primary-brand);
+}
 
+@media (min-width: 768px) {
+    .mobile-menu-wrapper {
+        width: 350px;
+        left: auto;
+        right: 0;
+    }
 }
