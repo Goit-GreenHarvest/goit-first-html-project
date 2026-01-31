@@ -21,6 +21,7 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
+
 }
 
 .mobile-menu-nav {
@@ -34,6 +35,7 @@
     text-align: center;
     color: var(--white);
     font-weight: 500;
+white-space: nowrap
 }
 
 .mobile-menu-item:hover {
@@ -62,4 +64,12 @@
     background-color: var(--white);
     color: var(--primary-brand);
 
+}
+
+@media (min-width: 768px) {
+    .mobile-menu-wrapper {
+        width: 350px;
+        left: auto;
+        right: 0;
+    }
 }
