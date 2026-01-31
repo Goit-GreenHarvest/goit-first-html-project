@@ -177,8 +177,7 @@
     flex-direction: row;
     margin-right: 0;
     justify-items: flex-end;
-    gap: 250px;
-    
+    gap: 60px;
     
   }
   .footer-brand {
