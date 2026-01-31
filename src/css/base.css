@@ -20,6 +20,7 @@
   --success-state: #3cbc81; /* Greenlight (Başarılı Giriş) */
   --error-state: #e74a3b; /* Smthwrong (Hatalı Giriş) */
 
+  --font-main: 'Inter Tight', sans-serif;
   -transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
