@@ -1,1 +1,72 @@
-/* deneme 2*/
+.reviews {
+    width: 375px;
+    /* SOR */
+    padding: 80px 20px;
+    background-color: #FBFBFB;
+    font-family: 'Times New Roman', Times, serif;
+    /* simdilik */
+}
+
+
+.reviews-header h2 {
+    margin: 0 0 20px;
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 600;
+
+}
+
+.title-top {
+    display: block;
+    color: #141414;
+}
+
+.title-bottom {
+    color: #576F35;
+}
+
+.reviews-header p {
+    margin: 0 0 40px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #141414;
+    font-weight: 500;
+}
+
+
+.reviews-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.review-card {
+    border: 1px solid #D4BFC4;
+    border-radius: 24px;
+    padding: 20px 16px;
+    text-align: center;
+}
+
+.review-img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 24px;
+}
+
+.review-name {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #141414;
+}
+
+.review-text {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #858585;
+    font-weight: 500;
+}
