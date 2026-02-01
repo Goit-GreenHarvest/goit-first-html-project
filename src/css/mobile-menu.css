@@ -114,3 +114,11 @@ margin-top: 296px;
     right: 32px;
   }
 }
+
+@media (min-width: 1200px) {
+ .burger-icon {
+
+display: none;
+
+ }
+}
