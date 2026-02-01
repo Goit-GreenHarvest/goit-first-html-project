@@ -1,37 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <header class="header">
-<div class="container">
-<div class="header-container">
-<div class="header-logo">
-<svg class="header-logo-panel">
-<use href="../img/sprite.svg#icon-panel"></use>
-</svg>
-<svg class="header-logo-text">
-<use class="mob-logo" href="../img/sprite.svg#icon-green-harvest-mob"></use>
-<use class="desk-logo" href="../img/sprite.svg#icon-green-harvest-desk"></use>
-</svg>
-</div>
+  <div class="container">
+    <div class="header-container">
+      <div class="header-logo">
+        <svg class="header-logo-panel">
+          <use href="../img/sprite.svg#icon-panel"></use>
+        </svg>
+        <svg class="header-logo-text">
+          <use
+            class="mob-logo"
+            href="../img/sprite.svg#icon-green-harvest-mob"
+          ></use>
+          <use
+            class="desk-logo"
+            href="../img/sprite.svg#icon-green-harvest-desk"
+          ></use>
+        </svg>
+      </div>
 
-<div class="header-button-group">
-<a href="" class="mobile-btn-close" >
-<svg width="" height="" class="close-svg">
-<use href="../img/sprite.svg#icon-close"></use>
-</svg>
-</a>
-<div class="header-nav-group">
-<a class="header-nav-buttons" href="#">How It Works</a>
-<a class="header-nav-buttons" href="#">Vegetables</a>
-<a class="header-nav-buttons" href="#">Reviews</a>
-</div>
-<a class="header-primary-button" href="#">Shop Now</a>
-</div>
+      <div class="header-button-group">
+        <div class="header-nav-group">
+          <a class="header-nav-buttons" href="#">How It Works</a>
+          <a class="header-nav-buttons" href="#">Vegetables</a>
+          <a class="header-nav-buttons" href="#">Reviews</a>
+        </div>
+        <a class="header-primary-button" href="#">Shop Now</a>
+      </div>
 
-<a href="" id="menu" class="mobile-btn" tabindex="0">
-<svg width="" height="" class="mobile-btn-svg">
-<use href="../img/sprite.svg#icon-hamburger"></use>
-</svg>
-</a>
+      <input type="checkbox" id="menu-toggle" class="menu-checkbox" hidden />
 
-</div>
-</div>
+      <label for="menu-toggle" class="burger-open">
+        <svg class="burger-icon" width="40" height="40">
+          <use href="./img/sprite.svg#icon-hamburger"></use>
+        </svg>
+      </label>
+
+      <div class="mobile-menu-wrapper">
+        <div class="mobile-menu-content">
+          <label for="menu-toggle" class="close-label">
+            <svg class="close-icon" width="40" height="40">
+              <use href="./img/sprite.svg#icon-close"></use>
+            </svg>
+          </label>
+          <nav class="mobile-menu-nav">
+            <ul class="mobile-menu-list">
+              <li class="mobile-menu-item active">
+                <a href="#" class="mobile-menu-link">How It Works</a>
+              </li>
+              <li class="mobile-menu-item">
+                <a href="#" class="mobile-menu-link">Vegetables</a>
+              </li>
+              <li class="mobile-menu-item">
+                <a href="#" class="mobile-menu-link">Reviews</a>
+              </li>
+            </ul>
+          </nav>
+          <button type="button" class="menu-shop-button">SHOP NOW</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </header>
