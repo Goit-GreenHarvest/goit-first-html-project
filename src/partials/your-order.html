@@ -1,7 +1,10 @@
 <section class="your-order-section">
   <div class="container your-order-container">
     <h2 class="your-order-title">
-      FRESH <span>HARVEST</span> BOX<br />HAS GOT YOU COVERED
+      FRESH <br />
+      <span>HARVEST&nbsp;</span>BOX <br />
+      HAS&nbsp;GOT&nbsp;YOU <br />
+      COVERED
     </h2>
     <p class="your-order-text">
       Our boxes are packed with delicious, nutritious vegetables, perfect for
@@ -11,9 +14,11 @@
     <div class="your-order-content">
       <div class="order-form-card">
         <h3 class="form-title">
-          ORDERING <span class="accent-brand">FROM US</span> IS QUICK AND EASY!
-          FILL OUT <span class="accent-green">THE FORM</span> BELOW AND WE WILL
-          CONTACT YOU!
+          ORDERING&nbsp;<span class="accent-brand">FROM&nbsp;US</span>&nbsp;IS
+          QUICK&nbsp;AND&nbsp;EASY!&nbsp;FILL OUT&nbsp;<span
+            class="accent-green"
+            >THE&nbsp;FORM</span
+          >&nbsp;BELOW AND&nbsp;WE&nbsp;WILL CONTACT&nbsp;YOU&nbsp;!
         </h3>
         <form class="order-form">
           <input
@@ -22,7 +27,14 @@
             placeholder="Full Name"
             required
           />
-          <input type="email" name="user-email" placeholder="Email" required />
+          <input
+            type="email"
+            name="user-email"
+            placeholder="Email"
+            required
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+            class="email-input"
+          />
           <textarea name="user-comment" placeholder="Comment"></textarea>
           <button type="submit" class="order-send-btn">SEND</button>
         </form>
@@ -42,11 +54,22 @@
         </div>
         <p class="social-text">Follow us on our social networks:</p>
         <ul class="order-social-links">
-          <li><a href="#">INSTAGRAM</a></li>
+          <li>
+            <a href="https://www.instagram.com/goit.turkiye/">INSTAGRAM</a>
+          </li>
           <li class="separator">/</li>
-          <li><a href="#">FACEBOOK</a></li>
+          <li>
+            <a
+              href="https://www.facebook.com/people/GOIT-Türkiye/61558036560161/"
+              >FACEBOOK</a
+            >
+          </li>
           <li class="separator">/</li>
-          <li><a href="#">YOUTUBE</a></li>
+          <li>
+            <a href="https://m.youtube.com/@GoITTurkey" target="_blank"
+              >YOUTUBE</a
+            >
+          </li>
         </ul>
       </div>
     </div>

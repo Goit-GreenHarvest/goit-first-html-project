@@ -1,65 +1,94 @@
-/* --- 1. GENEL BÖLÜM --- */
+/* --- 1. GENEL SECTION VE KAPSAYICI --- */
 .your-order-section {
-  font-family: 'Inter Tight', sans-serif;
-  background-color: var(--primary-color) !important;
-  padding: 80px 20px;
+  font-family: var(--font-main);
+  background-color: #576f35; /* Figma: rgba(87, 111, 53, 1) */
+  padding: 80px 0; /* Figma Layout: Top 80px, Bottom 80px */
   color: var(--white);
+  width: 100%;
 }
 
 .your-order-container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Mobilde merkezi hizalama */
+  align-items: center;
   width: 100%;
-  max-width: 335px;
+  max-width: 375px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* --- 2. TİPOGRAFİ (FİGMA VERİLERİ) --- */
+/* --- 2. TİPOGRAFİ (BAŞLIK VE METİN) --- */
 .your-order-title {
-  /* Figma 375/H2: 48px, SemiBold, 52px line-height, -1.5% spacing */
   font-size: 48px;
   font-weight: 600;
-  line-height: 1.08; 
+  line-height: 52px;
   letter-spacing: -0.015em;
   text-transform: uppercase;
-  margin-bottom: 20px;
   text-align: left;
+
+  max-width: 350px;
+  margin-bottom: 24px;
+  display: block;
 }
 
 .your-order-title span {
-  color: var(--details-grey);
+  color: var(--accent-color);
 }
 
 .your-order-text {
-  /* Figma 375/Body 1: 14px, Medium, 20px line-height */
   font-size: 14px;
   font-weight: 500;
-  line-height: 1.42;
+  line-height: 1.43;
+  color: #ffffff;
+  text-align: left;
+
+  width: 100%;
+  max-width: 335px;
+
+  margin-top: 20px;
   margin-bottom: 40px;
 }
 
-/* --- 3. FORM KARTI (SOL) --- */
+/* --- 3. FORM KARTI (BEYAZ KUTU) --- */
 .order-form-card {
   background-color: var(--white);
   color: var(--black);
-  padding: 24px;
-  border-radius: 20px;
   width: 100%;
-}
-
-.form-title {
-  /* Figma 375/H3: 28px, SemiBold, 28px line-height, -1.5% spacing */
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 1;
-  letter-spacing: -0.015em;
-  text-transform: uppercase;
+  min-height: 552px;
+  padding: 40px 20px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
   margin-bottom: 20px;
 }
 
-.form-title span.accent-brand { color: var(--primary-brand); }
-.form-title span.accent-green { color: var(--primary-color); }
+.form-title {
+  font-family: var(--font-main);
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  width: 100%;
+  margin: 0;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+.form-title .accent-brand {
+  color: var(--primary-brand);
+}
+.form-title .accent-green {
+  color: var(--primary-color);
+}
+
+/* --- 4. FORM ELEMANLARI VE INPUTLAR --- */
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
 
 .order-form input,
 .order-form textarea {
@@ -69,14 +98,21 @@
   border-radius: 100px;
   font-family: inherit;
   font-size: 14px;
-  margin-bottom: 12px;
   outline: none;
+  background: transparent;
+  color: var(--black);
 }
 
 .order-form textarea {
   border-radius: 20px;
   height: 100px;
   resize: none;
+}
+
+.order-form input::placeholder,
+.order-form textarea::placeholder {
+  color: var(--black); /* İstediğin siyah placeholder */
+  opacity: 1;
 }
 
 .order-send-btn {
@@ -87,16 +123,17 @@
   width: 100%;
   border: none;
   font-weight: 700;
+  text-transform: uppercase;
   cursor: pointer;
+  transition: opacity var(--transition);
 }
 
-/* --- 4. GÖRSEL KARTI (SAĞ) --- */
+/* --- 5. GÖRSEL KARTI (BORDO KUTU) --- */
 .order-image-card {
   background-color: var(--primary-brand);
   padding: 24px;
   border-radius: 20px;
   width: 100%;
-  margin-top: 20px; /* Mobilde kartlar arası boşluk */
 }
 
 .image-card img {
@@ -107,7 +144,7 @@
 }
 
 .social-text {
-  /* Figma 375/Body 2: 14px, Bold, Blush color */
+  /* Figma 375/Body 2: 14px, Bold */
   font-size: 14px;
   font-weight: 700;
   color: var(--accent-color);
@@ -116,18 +153,80 @@
 
 .order-social-links {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 8px;
   list-style: none;
   padding: 0;
 }
 
-.order-social-links a, 
+.order-social-links a,
 .order-social-links .separator {
-  /* Figma 375/Accent text: 18px, SemiBold, -1.5% spacing */
+  /* Figma 375/Accent text: 18px, SemiBold */
   font-size: 18px;
   font-weight: 600;
   letter-spacing: -0.015em;
   color: var(--white);
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  .your-order-container {
+    max-width: 704px; /* Genellikle tablet güvenli alanı */
+    padding: 0 32px;
+  }
+
+  /* Başlık ve Metin Genişleme */
+  .your-order-title {
+    font-size: 64px;
+    line-height: 68px;
+    max-width: 550px; /* Metnin kırılma noktası için */
+    text-align: left;
+  }
+
+  .your-order-text {
+    max-width: 480px;
+  }
+
+  /* Beyaz ve Bordo Kartların Genişlemesi */
+  .order-form-card,
+  .order-image-card {
+    max-width: 100%; /* Mobildeki 335px engelini kaldırıyoruz */
+    width: 100%;
+  }
+
+  /* Form Title Tablette daha rahat sığar */
+  .form-title {
+    max-width: 100%;
+    font-size: 28px;
+    letter-spacing: -0.015em; /* Mobildeki aşırı daraltmayı normale çekebilirsin */
+  }
+}
+@media screen and (min-width: 1200px) {
+  .your-order-container {
+    max-width: 1200px;
+    padding: 0 50px;
+    align-items: flex-start; /* İçeriği sola yasla */
+  }
+
+  /* Kartları Yan Yana Getir */
+  .your-order-content {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch; /* Kart boylarını eşitlemek için */
+    gap: 32px; /* Aradaki boşluk */
+    width: 100%;
+  }
+
+  .order-form-card,
+  .order-image-card {
+    flex: 1; /* İkisi de eşit genişlik kaplasın */
+    margin-bottom: 0; /* Alt alta boşluğu kaldır */
+  }
+
+  /* Bordo karttaki resmin desktopta daha büyük durması için */
+  .image-card img {
+    height: auto;
+    object-fit: cover;
+  }
 }
