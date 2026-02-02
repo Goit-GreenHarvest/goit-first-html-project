@@ -1,70 +1,89 @@
 .advert-section {
-    font-weight: 600;
-    background-color: #fbfbfb;
-    padding: 80px 20px;
-    text-align: center;
-    height: auto;
-    max-width: 100%;
+  background-color: #fbfbfb;
+  padding: 40px 20px; /* Mobilde dikey padding'i biraz düşürdük */
+  display: flex;
+  justify-content: flex-start; /* Sola yaslı görünüm için */
+  text-align: start;
+}
+
+.advert-content {
+  width: auto; /* Mobilde metnin çok yayılmaması için */
 }
 
 .discount-text {
-    font-weight: 600;
-    font-size: 48px;
-    color: #141414;
-    line-height: 1.04;
-    margin: 0 auto;
-    text-align: left;
-    letter-spacing: -0.015em;
-    width: 100%;
+  font-weight: 600;
+  font-size: 38px; /* Mobilde çok büyük kaçmaması için ideal boyut */
+  color: #141414;
+  line-height: 1.1; /* Harflerin birbirine girmemesi için hafif artırıldı */
+  margin: 0;
+  text-align: left;
+  letter-spacing: -0.04em; /* Tasarımdaki o sıkışık görünüm için */
+  text-transform: uppercase;
 }
 
 .span-advert-text {
-    background-color: #576f35;
-    color: #fbfbfb;
-    padding: 0 10px;
+  background-color: #576f35;
+  color: #fbfbfb;
+  padding: 4px 12px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-bottom: 8px; /* Alt metinle arasına mesafe */
+  font-size: 38px; /* Üstteki text ile aynı boyutta olması için */
+}
+
+@media (min-width: 768px) {
+  .advert-section {
+    padding: 100px 32px;
+    display: flex;
+    justify-content: flex-start; /* İçeriği sola yaslar */
+  }
+
+  .advert-content {
+    /* Görseldeki gibi metnin belirli bir noktadan kırılması için */
+    max-width: 700px;
+  }
+
+  .discount-text {
+    font-size: 64px;
+    line-height: 1.09;
+    letter-spacing: -0.04em; /* Sıkışık görünümü korumak için */
+    text-align: left;
+  }
+
+  .span-advert-text {
+    font-size: 64px; /* Başlık boyutuyla eşitlendi */
+    padding: 4px 16px;
+    margin-bottom: 12px;
     border-radius: 12px;
-    display: inline-block;
+  }
 }
 
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    overflow: hidden;
-}
+@media (min-width: 1200px) {
+  .advert-section {
+    padding: 100px; /* Geniş ekranlarda ferah boşluk */
+    display: flex;
+    justify-content: center; /* İçeriği merkeze odaklamak için */
+  }
 
-/*tablet*/
+  .advert-content {
+    /* Görseldeki gibi metnin tek satırda uzaması için genişliği artırıyoruz */
+    max-width: 1240px;
+    width: 100%;
+  }
 
-@media (min-width: 768px) and (max-width: 1279px) {
-    .advert-section {
-        width: 100%;
-        height: auto;
-        padding: 100px 32px;
-    }
+  .discount-text {
+    font-size: 76px;
+    line-height: 1.05; /* Büyük fontta satır arasını biraz daha daraltabiliriz */
+    letter-spacing: -0.04em;
+    text-align: left;
+  }
 
-    .discount-text {
-        font-size: 64px;
-        line-height: 1.09;
-    }
-}
-
-/*desktop */
-
-@media (min-width: 1280px) {
-    .advert-section {
-        height: auto;
-        width: 100%;
-        padding: 100px 100px;
-        gap: 10px;
-    }
-
-    .discount-text {
-        font-size: 76px;
-        max-width: 100%;
-    }
+  .span-advert-text {
+    font-size: 76px;
+    padding: 8px 24px;
+    margin-right: 15px; /* "TASTE" kelimesiyle arasına boşluk */
+    margin-bottom: 0; /* Masaüstünde yan yana durmaları için alt boşluğu sıfırlayabiliriz */
+    border-radius: 16px;
+    vertical-align: middle;
+  }
 }
