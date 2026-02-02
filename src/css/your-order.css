@@ -172,22 +172,33 @@
 
 @media screen and (min-width: 768px) {
   .your-order-container {
-    max-width: 704px; /* Genellikle tablet güvenli alanı */
-    padding: 0 32px;
+    max-width: 704px;
+    padding: 0;
+    /* İçindeki her şeyi (başlık ve p) sola yaslar */
+    align-items: flex-start;
   }
 
-  /* Başlık ve Metin Genişleme */
   .your-order-title {
     font-size: 64px;
-    line-height: 68px;
-    max-width: 550px; /* Metnin kırılma noktası için */
+    line-height: 1.06;
+    /* Rakamı büyütüyoruz ki "BOX" kelimesi yukarı sığsın */
+    max-width: 704px;
+    width: 100%;
     text-align: left;
+    margin-bottom: 24px;
+    /* Kelimelerin kutuya sığması için zorla */
+    display: block;
   }
 
   .your-order-text {
-    max-width: 480px;
+    font-size: 16px; /* Tasarıma göre biraz büyütebilirsin */
+    line-height: 1.25;
+    text-align: left; /* Sola hizalar */
+    margin-left: 0; /* Eğer margin: auto kaldıysa sıfırlar */
+    margin-right: auto;
+    max-width: 480px; /* Paragrafın çok uzamaması için ideal genişlik */
+    width: 100%;
   }
-
   /* Beyaz ve Bordo Kartların Genişlemesi */
   .order-form-card,
   .order-image-card {
@@ -202,11 +213,39 @@
     letter-spacing: -0.015em; /* Mobildeki aşırı daraltmayı normale çekebilirsin */
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
+  .your-order-section {
+    padding: 100px 0; /* Figma Layout: Top 100px, Bottom 100px */
+  }
   .your-order-container {
     max-width: 1200px;
     padding: 0 50px;
     align-items: flex-start; /* İçeriği sola yasla */
+    display: flex;
+    gap: 32px;
+  }
+  .your-order-title {
+    max-width: 800px;
+    height: 128px;
+    opacity: 1;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 64px;
+    display: block;
+    /* Bu değeri deneme-yanılma ile (örneğin 500px, 600px) ayarla */
+    font-weight: 600;
+    line-height: 1.1;
+    text-align: left;
+  }
+
+  .your-order-text {
+    width: 1024px;
+    opacity: 1;
+    max-width: 742px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    vertical-align: middle;
   }
 
   /* Kartları Yan Yana Getir */
@@ -222,11 +261,27 @@
   .order-image-card {
     flex: 1; /* İkisi de eşit genişlik kaplasın */
     margin-bottom: 0; /* Alt alta boşluğu kaldır */
+    width: 524px;
+    height: 592px;
+    opacity: 1;
+    padding-top: 52px;
+    padding-right: 48px;
+    padding-bottom: 52px;
+    padding-left: 48px;
+    border-radius: 30px;
   }
 
   /* Bordo karttaki resmin desktopta daha büyük durması için */
   .image-card img {
     height: auto;
     object-fit: cover;
+  }
+  .order-image-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .social-text {
+    margin-top: auto; /* Bu komut üstteki boşluğu iter ve yazıyı aşağı yapıştırır */
   }
 }
