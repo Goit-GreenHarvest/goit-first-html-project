@@ -1,189 +1,126 @@
 .header {
-  position: absolute; 
+  position: absolute;
+  background-color: var(--primary-color);
+  padding: 20px 0;
   width: 100%;
-  background-color: transparent; 
-  padding: 32px 0; 
 }
-.header-container{
-  width: 100%;
-  padding: 0 100px;
+.header-container {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
-.header-button-group  {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-}
-
 .header-logo {
-display: flex;
-align-items: center;
-gap: 8px; /* İkon ve yazı arası mesafe */
-margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* İkon ve yazı arası mesafe */
 }
 
 .header-logo-panel {
-width: 20px;
-height: 20px;
-flex-shrink: 0; /* Asla küçülme kanka */
-fill: var(--white);
+  width: 16px;
+  height: 16px;
+  fill: var(--white);
 }
 
 .header-logo-text {
-width: 146px;
-height: 12px;
-fill: var(--white);
+  width: 130px;
+  height: 20px;
+  fill: var(--white);
 }
 
 .desk-logo {
-display: none;
+  display: none;
 }
 .mob-logo {
-display: block;
+  display: block;
 }
 
-.header-button-group a{
+.header-button-group {
+  display: none;
+  align-items: center;
+  gap: 24px;
+}
+
+.header-nav-group {
+  display: flex;
+  gap: 20px;
+}
+
+.header-nav-buttons {
+  color: var(--white);
   text-decoration: none;
-}
-
-.header-nav-buttons  {
-  color: #fbfbfb;
-  font-size: 16px; 
+  font-size: 14px;
   font-weight: 500;
-  padding: 12px; 
-  border: 1px solid #fbfbfb; 
-  border-radius: 10px;
-  transition: background-color 0.3s ease; 
-  line-height: 20px;
+  transition: var(--transition);
 }
-.header-nav-buttons:hover{
-  color: #7A3145;
-  background-color: #D4BFC4;
+
+.header-nav-buttons:hover {
+  text-decoration: underline;
 }
-.header-nav-buttons:focus{
-  color: #7A3145;
-  background-color: #FBFBFB;
+
+.header-nav-buttons:focus {
+  color: var(--primary-brand);
+  background-color: var(--white);
 }
+
 .header-primary-button {
- color: #fbfbfb;
- background-color: #7a3145;
- font-size: 20px; 
- font-weight: 500; 
- padding: 16px 32px;
- border-radius: 50px ;
- transition: background-color 0.3s ease;
- margin-left: 50px;
+  color: var(--white);
+  background-color: var(--primary-brand);
+  border: 1.5px solid var(--white);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 50px;
+  transition: var(--transition);
+  margin-left: 50px;
 }
-.header-primary-button:hover{
-  color: #7A3145;
-  background-color: #D4BFC4;
+.header-primary-button:hover {
+  color: var(--primary-brand);
+  background-color: var(--white);
 }
-.header-primary-button:focus{
-  color: #7A3145;
-  background-color: #FBFBFB;
+.header-primary-button:focus {
+  color: var(--primary-brand);
+  background-color: var(--white);
 }
 
+.burger-open {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
 
-@media (max-width: 768px){
- 
-  .header{
-    padding:20px;
-  }
-  .header-container{
-    padding: 0px;
-  }
-  .header-button-group{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    background: #576F35;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 32px 32px 48px;
-    display: none;
-  }
-  .header-nav-group{
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-  }
-  .header-nav-buttons:hover{
-    background-color: #FBFBFB;
-    color: #7A3145;
+.burger-icon {
+  width: 21px;
+  height: 16px;
+  fill: var(--white);
+}
 
+@media (min-width: 768px) {
+  .header {
+    padding: 32px 0;
   }
-
-  .close-svg{
-    fill: #FBFBFB;
+  .header-logo-panel {
     width: 20px;
     height: 20px;
   }
-  .header-primary-button{
-    margin-left: 0;
+  .header-logo-text {
+    width: 186px;
+    height: 16px;
   }
- 
+  .burger-icon {
+    width: 26px;
+    height: 20px;
+    fill: var(--white);
+  }
   .mob-logo {
-display: none;
-}
-.desk-logo {
-display: block;
-}
-.header-logo-text {
-width: 187px; 
-height: 17px;
-}
-
- 
-}
-
-@media (max-width: 1200px) {
-  .header-nav-buttons:hover {
-    background-color: #FBFBFB;
-    color: #7A3145;
-  }
-
-  .header-primary-button:hover {
-    background-color: #FBFBFB;
-    color: #7A3145;
-  }
-
-  .header {
-    padding: 32px;
-  }
-
-  .header-container {
-    padding: 0px;
-  }
-
-  .header-button-group {
-    position: fixed;
-    width: 351px;
-    height: 100%;
-    top: 0;
-    right: 0;
-    background: #576F35;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 32px 32px 48px;
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
     display: none;
-    box-shadow: -500px -2px 500px 500px rgba(0, 0, 0, 0.77);
   }
-
-  .header-nav-group {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+  .desk-logo {
+    display: block;
   }
+}
 
-
-  .header-primary-button {
-    margin-left: 0;
+@media (min-width: 1200px) {
+  .burger-icon {
   }
 }
