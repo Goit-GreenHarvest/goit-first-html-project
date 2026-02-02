@@ -22,6 +22,7 @@
   font-size: 48px;
   font-weight: 600;
   line-height: 52px;
+  line-height: 1.08;
   letter-spacing: -0.015em;
   text-transform: uppercase;
   text-align: left;
@@ -162,71 +163,124 @@
 
 .order-social-links a,
 .order-social-links .separator {
-  /* Figma 375/Accent text: 18px, SemiBold */
   font-size: 18px;
   font-weight: 600;
   letter-spacing: -0.015em;
   color: var(--white);
   text-transform: uppercase;
 }
-
+/* Mobilde kırılma devam etsin */
+.mobile-br {
+  display: block;
+}
 @media screen and (min-width: 768px) {
+  /* 1. Kapsayıcı: Figma'daki tam değerler */
   .your-order-container {
-    max-width: 704px; /* Genellikle tablet güvenli alanı */
-    padding: 0 32px;
+    width: 768px;
+    margin: 0 auto;
+    /* Sağdaki 96px boşluğu korurken içeriğin sığması için: */
+    padding: 0 96px 0 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  /* Başlık ve Metin Genişleme */
+  /* 2. Başlık: 64px ve 3 Satır */
   .your-order-title {
     font-size: 64px;
-    line-height: 68px;
-    max-width: 550px; /* Metnin kırılma noktası için */
+    font-weight: 600;
+    line-height: 1.06;
+    /* Sığdırmak için kritik daraltma: */
+    letter-spacing: -0.05em;
     text-align: left;
+    text-transform: uppercase;
+
+    /* Genişliği kısıtlamıyoruz, padding belirlesin */
+    width: 100%;
+    max-width: none;
+    margin-bottom: 25px; /* Paragraf ile arasındaki mesafe (Gap) */
+  }
+
+  /* HTML'deki <br /> etiketini sadece tablette kapatıyoruz */
+  .mobile-br {
+    display: none;
+  }
+
+  /* 3. Paragraf Metni: Başlıkla aynı genişlikte (640px civarı) */
+  .your-order-text {
+    font-size: 16px;
+    line-height: 1.25;
+    text-align: left;
+
+    /* Başlıkla aynı hizaya gelmesi için: */
+    width: 100%;
+    max-width: 640px;
+    min-height: 60px;
+
+    opacity: 1;
+    margin-bottom: 40px;
+  }
+
+  /* 4. Alt Kısımdaki Kartlar */
+  .order-form-card,
+  .order-image-card {
+    width: 100%;
+    /* Kartların konteyner içinde dengeli durması için: */
+    max-width: 704px;
+    padding: 64px;
+    border-radius: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* 1. Kapsayıcıyı 1024px'e göre genişletiyoruz */
+  .your-order-container {
+    max-width: 1024px;
+    width: 100%;
+    /* Figma'dan aldığın o kesin padding değerleri */
+    padding: 0 96px 0 32px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* 2. Başlık: 64px ve 3 Satır */
+  .your-order-title {
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 1.06;
+    /* 1024px genişlikte yazı rahatlayacağı için harf aralığını normale yaklaştırabilirsin */
+    letter-spacing: -0.02em;
+    text-align: left;
+
+    /* Yazının sığması için genişliği kısıtlamıyoruz */
+    width: 100%;
+    max-width: 800px; /* Yazının çok tek satıra düşmemesi için limit */
+    margin-bottom: 25px;
+  }
+
+  .mobile-br {
+    display: none;
   }
 
   .your-order-text {
-    max-width: 480px;
-  }
+    font-size: 16px;
+    line-height: 1.25;
+    text-align: left;
 
-  /* Beyaz ve Bordo Kartların Genişlemesi */
-  .order-form-card,
-  .order-image-card {
-    max-width: 100%; /* Mobildeki 335px engelini kaldırıyoruz */
     width: 100%;
-  }
+    max-width: 640px;
+    min-height: 60px;
 
-  /* Form Title Tablette daha rahat sığar */
-  .form-title {
-    max-width: 100%;
-    font-size: 28px;
-    letter-spacing: -0.015em; /* Mobildeki aşırı daraltmayı normale çekebilirsin */
-  }
-}
-@media screen and (min-width: 1200px) {
-  .your-order-container {
-    max-width: 1200px;
-    padding: 0 50px;
-    align-items: flex-start; /* İçeriği sola yasla */
-  }
-
-  /* Kartları Yan Yana Getir */
-  .your-order-content {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch; /* Kart boylarını eşitlemek için */
-    gap: 32px; /* Aradaki boşluk */
-    width: 100%;
+    margin-bottom: 40px;
   }
 
   .order-form-card,
   .order-image-card {
-    flex: 1; /* İkisi de eşit genişlik kaplasın */
-    margin-bottom: 0; /* Alt alta boşluğu kaldır */
-  }
-
-  /* Bordo karttaki resmin desktopta daha büyük durması için */
-  .image-card img {
-    height: auto;
-    object-fit: cover;
+    width: 100%;
+    max-width: 800px;
+    padding: 64px;
+    border-radius: 30px;
   }
 }
