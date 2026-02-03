@@ -154,7 +154,6 @@
 .image-card img {
   width: 295px;
   height: 272px;
-  display: block;
 }
 
 @media (min-width: 768px) {
