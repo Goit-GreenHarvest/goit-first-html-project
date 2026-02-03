@@ -1,8 +1,7 @@
-/* --- 1. GENEL SECTION VE KAPSAYICI --- */
 .your-order-section {
   font-family: var(--font-main);
-  background-color: #576f35; /* Figma: rgba(87, 111, 53, 1) */
-  padding: 80px 0; /* Figma Layout: Top 80px, Bottom 80px */
+  background-color: var(--primary-color);
+  padding: 80px 0;
   color: var(--white);
   width: 100%;
 }
@@ -10,14 +9,9 @@
 .your-order-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 375px;
-  margin: 0 auto;
-  padding: 0 20px;
+  max-width: 335px;
 }
 
-/* --- 2. TİPOGRAFİ (BAŞLIK VE METİN) --- */
 .your-order-title {
   font-size: 48px;
   font-weight: 600;
@@ -25,10 +19,8 @@
   letter-spacing: -0.015em;
   text-transform: uppercase;
   text-align: left;
-
-  max-width: 350px;
-  margin-bottom: 24px;
   display: block;
+  padding-bottom: 20px;
 }
 
 .your-order-title span {
@@ -38,42 +30,33 @@
 .your-order-text {
   font-size: 14px;
   font-weight: 500;
-  line-height: 1.43;
-  color: #ffffff;
+  line-height: 20px;
+  color: var(--white);
   text-align: left;
-
+  padding-bottom: 40px;
   width: 100%;
-  max-width: 335px;
-
-  margin-top: 20px;
-  margin-bottom: 40px;
 }
 
-/* --- 3. FORM KARTI (BEYAZ KUTU) --- */
-.order-form-card {
+.your-order-content {
   background-color: var(--white);
   color: var(--black);
-  width: 100%;
-  min-height: 552px;
-  padding: 40px 20px;
+  width: 335px;
+  height: 552px;
   border-radius: 30px;
   display: flex;
   flex-direction: column;
+  padding: 40px 20px;
   gap: 40px;
-  margin-bottom: 20px;
 }
 
 .form-title {
-  font-family: var(--font-main);
+  text-transform: uppercase;
+  text-align: left;
   font-size: 28px;
   font-weight: 600;
   line-height: 28px;
-  letter-spacing: -0.04em;
   text-transform: uppercase;
   width: 100%;
-  margin: 0;
-  word-break: keep-all;
-  overflow-wrap: normal;
 }
 
 .form-title .accent-brand {
@@ -83,11 +66,9 @@
   color: var(--primary-color);
 }
 
-/* --- 4. FORM ELEMANLARI VE INPUTLAR --- */
 .order-form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
 }
 
 .order-form input,
@@ -104,23 +85,28 @@
 }
 
 .order-form textarea {
-  border-radius: 20px;
+  border-radius: 15px;
   height: 100px;
   resize: none;
 }
 
 .order-form input::placeholder,
 .order-form textarea::placeholder {
-  color: var(--black); /* İstediğin siyah placeholder */
-  opacity: 1;
+  color: var(--black);
+}
+
+.form-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .order-send-btn {
   background-color: var(--primary-brand);
   color: var(--white);
-  padding: 15px;
+  padding: 15px 0;
+  margin-top: 20px;
   border-radius: 100px;
-  width: 100%;
   border: none;
   font-weight: 700;
   text-transform: uppercase;
@@ -128,27 +114,23 @@
   transition: opacity var(--transition);
 }
 
-/* --- 5. GÖRSEL KARTI (BORDO KUTU) --- */
 .order-image-card {
   background-color: var(--primary-brand);
-  padding: 24px;
+  padding: 40px 20px;
   border-radius: 20px;
-  width: 100%;
-}
-
-.image-card img {
-  width: 100%;
-  border-radius: 15px;
-  margin-bottom: 20px;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  width: 335px;
+  height: 456px;
+  gap: 20px;
+  margin-top: 20px;
 }
 
 .social-text {
-  /* Figma 375/Body 2: 14px, Bold */
   font-size: 14px;
+  line-height: 20px;
   font-weight: 700;
   color: var(--accent-color);
-  margin-bottom: 12px;
 }
 
 .order-social-links {
@@ -162,7 +144,6 @@
 
 .order-social-links a,
 .order-social-links .separator {
-  /* Figma 375/Accent text: 18px, SemiBold */
   font-size: 18px;
   font-weight: 600;
   letter-spacing: -0.015em;
@@ -170,118 +151,103 @@
   text-transform: uppercase;
 }
 
-@media screen and (min-width: 768px) {
-  .your-order-container {
-    max-width: 704px;
-    padding: 0;
-    /* İçindeki her şeyi (başlık ve p) sola yaslar */
-    align-items: flex-start;
-  }
-
-  .your-order-title {
-    font-size: 64px;
-    line-height: 1.06;
-    /* Rakamı büyütüyoruz ki "BOX" kelimesi yukarı sığsın */
-    max-width: 704px;
-    width: 100%;
-    text-align: left;
-    margin-bottom: 24px;
-    /* Kelimelerin kutuya sığması için zorla */
-    display: block;
-  }
-
-  .your-order-text {
-    font-size: 16px; /* Tasarıma göre biraz büyütebilirsin */
-    line-height: 1.25;
-    text-align: left; /* Sola hizalar */
-    margin-left: 0; /* Eğer margin: auto kaldıysa sıfırlar */
-    margin-right: auto;
-    max-width: 480px; /* Paragrafın çok uzamaması için ideal genişlik */
-    width: 100%;
-  }
-  /* Beyaz ve Bordo Kartların Genişlemesi */
-  .order-form-card,
-  .order-image-card {
-    max-width: 100%; /* Mobildeki 335px engelini kaldırıyoruz */
-    width: 100%;
-  }
-
-  /* Form Title Tablette daha rahat sığar */
-  .form-title {
-    max-width: 100%;
-    font-size: 28px;
-    letter-spacing: -0.015em; /* Mobildeki aşırı daraltmayı normale çekebilirsin */
-  }
+.image-card img {
+  width: 295px;
+  height: 272px;
+  display: block;
 }
-@media screen and (min-width: 1024px) {
-  .your-order-section {
-    padding: 100px 0; /* Figma Layout: Top 100px, Bottom 100px */
-  }
+
+@media (min-width: 768px) {
   .your-order-container {
-    max-width: 1200px;
-    padding: 0 50px;
-    align-items: flex-start; /* İçeriği sola yasla */
-    display: flex;
-    gap: 32px;
+    max-width: 640px;
   }
+
   .your-order-title {
-    max-width: 800px;
-    height: 128px;
-    opacity: 1;
-    font-weight: 600;
     font-size: 64px;
     line-height: 64px;
-    display: block;
-    /* Bu değeri deneme-yanılma ile (örneğin 500px, 600px) ayarla */
-    font-weight: 600;
-    line-height: 1.1;
-    text-align: left;
+    max-width: 704px;
   }
 
   .your-order-text {
-    width: 1024px;
-    opacity: 1;
-    max-width: 742px;
-    font-weight: 500;
     font-size: 16px;
-    line-height: 20px;
-    vertical-align: middle;
   }
 
-  /* Kartları Yan Yana Getir */
   .your-order-content {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch; /* Kart boylarını eşitlemek için */
-    gap: 32px; /* Aradaki boşluk */
-    width: 100%;
+    margin: 0 auto;
+    width: 640px;
+    height: 632px;
+    padding: 72px 100px;
+    gap: 10px;
+    margin-bottom: 32px;
   }
 
-  .order-form-card,
-  .order-image-card {
-    flex: 1; /* İkisi de eşit genişlik kaplasın */
-    margin-bottom: 0; /* Alt alta boşluğu kaldır */
-    width: 524px;
-    height: 592px;
-    opacity: 1;
-    padding-top: 52px;
-    padding-right: 48px;
+  .form-title {
+    font-size: 32px;
+    line-height: 32px;
     padding-bottom: 52px;
-    padding-left: 48px;
-    border-radius: 30px;
+    letter-spacing: -0.015em;
   }
 
-  /* Bordo karttaki resmin desktopta daha büyük durması için */
-  .image-card img {
-    height: auto;
-    object-fit: cover;
+  .order-send-btn {
+    margin-top: 24px;
+    padding: 16px 191px;
   }
+
   .order-image-card {
-    display: flex;
-    flex-direction: column;
+    margin: 0 auto;
+    width: 640px;
+    height: 528px;
+    border-radius: 30px;
+    padding: 52px;
+  }
+
+  .image-card img {
+    width: 536px;
+    height: 316px;
+    border-radius: 15px;
   }
 
   .social-text {
-    margin-top: auto; /* Bu komut üstteki boşluğu iter ve yazıyı aşağı yapıştırır */
+    font-size: 16px;
+    line-height: 20px;
+    padding-top: 32px;
+  }
+
+  .order-social-links {
+    gap: 12px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .your-order-container {
+    max-width: 751px;
+  }
+
+  .your-order-wrapper {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+  }
+
+  .your-order-content {
+    width: 524px;
+    height: 592px;
+    padding: 52px 48px;
+  }
+
+  .order-image-card {
+    width: 524px;
+    height: 592px;
+    padding: 52px 48px;
+  }
+
+  .image-card img {
+    width: 428px;
+    height: 352px;
+    border-radius: 15px;
+  }
+
+  .social-text {
+    padding-top: 48px;
   }
 }
