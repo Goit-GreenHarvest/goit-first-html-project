@@ -196,6 +196,7 @@
 
   .hero-steps-list {
     margin-top: 52px;
+
     gap: 24px;
   }
 }
@@ -220,7 +221,6 @@
   }
 
   .hero-title {
-    margin-bottom: 128px;
     font-size: 76px;
     line-height: 76px;
     font-weight: 600;
