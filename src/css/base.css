@@ -21,5 +21,16 @@
   --error-state: #e74a3b; /* Smthwrong (Hatalı Giriş) */
 
   --font-main: 'Inter Tight', sans-serif;
-  -transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button,
+a,
+input,
+textarea {
+  transition: var(--transition);
+}
+
+button:focus:not(:focus-visible) {
+  outline: none;
 }

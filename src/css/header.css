@@ -9,13 +9,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
 }
 
 .header-logo {
   display: flex;
   align-items: center;
-  gap: 8px; 
+  gap: 8px;
 }
 
 .header-logo-panel {
@@ -30,7 +29,7 @@
   fill: var(--white);
 }
 
-.desk-logo{
+.desk-logo {
   display: none;
 }
 .mob-logo {
@@ -61,15 +60,13 @@
 
 .header-nav-buttons:hover {
   color: var(--primary-brand);
-  background-color: var(--accent-color); 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(--accent-color);
   border: none;
 }
 
 .header-nav-buttons:focus {
   color: var(--primary-brand);
   background-color: var(--white);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-primary-button {
@@ -80,7 +77,6 @@
   font-weight: 600;
   padding: 16px 32px;
   border-radius: 50px;
-  transition: var(--transition);
   display: flex;
   align-items: center;
   border: none;
@@ -88,19 +84,16 @@
 .header-primary-button:hover {
   color: var(--primary-brand);
   background-color: var(--accent-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-primary-button:focus {
   color: var(--primary-brand);
   background-color: var(--white);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .burger-open {
   display: flex;
   align-items: center;
   cursor: pointer;
- 
 }
 
 .burger-icon {
@@ -141,8 +134,7 @@
   .header-button-group {
     display: flex;
     gap: 20px;
-      align-items: center;
-        margin-left: auto;
-    
+    align-items: center;
+    margin-left: auto;
   }
 }

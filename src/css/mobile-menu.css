@@ -60,8 +60,8 @@
   flex-direction: column;
   gap: 24px;
   align-items: center;
-margin-bottom: 232px;
-margin-top: 296px;
+  margin-bottom: 232px;
+  margin-top: 296px;
 }
 
 .mobile-menu-item {
@@ -76,7 +76,6 @@ margin-top: 296px;
 .mobile-menu-item:hover {
   background-color: var(--white);
   color: var(--primary-brand);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .active {
@@ -100,8 +99,6 @@ margin-top: 296px;
   background-color: var(--white);
 
   color: var(--primary-brand);
-
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media (min-width: 768px) {
@@ -116,9 +113,7 @@ margin-top: 296px;
 }
 
 @media (min-width: 1200px) {
- .burger-icon {
-
-display: none;
-
- }
+  .burger-icon {
+    display: none;
+  }
 }
