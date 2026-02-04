@@ -19,21 +19,10 @@
         </h3>
         <form class="order-form">
           <div class="form-input-wrapper">
-            <input
-              type="text"
-              name="user-name"
-              placeholder="Full Name"
-              required
-            />
-            <input
-              type="email"
-              name="user-email"
-              placeholder="Email"
-              required
-              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-              class="email-input"
-            />
-            <textarea name="user-comment" placeholder="Comment"></textarea>
+            <input type="text" name="user-name" placeholder="Full Name" required />
+            <input type="email" name="user-email" placeholder="Email" required
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="email-input" />
+            <textarea name="user-comment" placeholder="Comment" required></textarea>
           </div>
           <button type="submit" class="order-send-btn">SEND</button>
         </form>
@@ -42,54 +31,32 @@
       <div class="order-image-card">
         <div class="image-card">
           <picture class="image-card-picture">
-            <source
-              media="(min-width: 1200px)"
-              srcset="
+            <source media="(min-width: 1200px)" srcset="
                 ./img/webp/make-lemon-smoothie.webp    1x,
                 ./img/webp/make-lemon-smoothie@2x.webp 2x
-              "
-              type="image/webp"
-            />
-            <source
-              media="(min-width: 768px)"
-              srcset="
+              " type="image/webp" />
+            <source media="(min-width: 768px)" srcset="
                 ./img/webp/make-lemon-smoothie-tab.webp    1x,
                 ./img/webp/make-lemon-smoothie-tab@2x.webp 2x
-              "
-              type="image/webp"
-            />
-            <source
-              srcset="
+              " type="image/webp" />
+            <source srcset="
                 ./img/webp/make-lemon-smoothie-mob.webp    1x,
                 ./img/webp/make-lemon-smoothie-mob@2x.webp 2x
-              "
-              type="image/webp"
-            />
-            <img
-              src="./img/webp/make-lemon-smoothie-mob.webp"
-              alt="Preparing juice"
-            />
+              " type="image/webp" />
+            <img src="./img/webp/make-lemon-smoothie-mob.webp" alt="Preparing juice" />
           </picture>
         </div>
 
         <p class="social-text">Follow us on our social networks:</p>
         <ul class="order-social-links">
           <li>
-            <a href="https://www.instagram.com/goit.turkiye/" target="_blank"
-              >INSTAGRAM</a
-            >
+            <a href="https://www.instagram.com/goit.turkiye/" target="_blank">INSTAGRAM</a>
           </li>
           <li>
-            <a
-              href="https://www.facebook.com/people/GOIT-Türkiye/61558036560161/"
-              target="_blank"
-              >FACEBOOK</a
-            >
+            <a href="https://www.facebook.com/people/GOIT-Türkiye/61558036560161/" target="_blank">FACEBOOK</a>
           </li>
           <li>
-            <a href="https://m.youtube.com/@GoITTurkey" target="_blank"
-              >YOUTUBE</a
-            >
+            <a href="https://m.youtube.com/@GoITTurkey" target="_blank">YOUTUBE</a>
           </li>
         </ul>
       </div>
