@@ -7,10 +7,8 @@
 
 /* Common styles */
 @import 'modern-normalize';
-@import './reset.css'; /* Tarayıcı farklarını sıfırlar */
 @import './base.css'; /* Genel body, font ve renk tanımları */
 @import './container.css'; /* Sayfa genişliğini (max-width) belirler */
-@import './animations.css'; /* Geçiş efektleri ve animasyonlar */
 
 /* Sections style */
 @import './header.css'; /* Header & Mobile Menu */
