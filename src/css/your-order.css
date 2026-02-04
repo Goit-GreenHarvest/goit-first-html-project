@@ -250,15 +250,24 @@
     padding-top: 48px;
   }
 }
+
 .order-form input:focus,
 .order-form textarea:focus {
-  border-color: brown;
+  border-color: var(--error-state);
 }
 
 .order-form input:not(:placeholder-shown):invalid {
-  border-color: red;
+  border-color: var(--error-state);
+}
+
+.order-form textarea:not(:placeholder-shown):invalid {
+  border-color: var(--error-state);
 }
 
 .order-form input:not(:placeholder-shown):valid {
-  border-color: green;
+  border-color: var(--success-state);
+}
+
+.order-form textarea:not(:placeholder-shown):valid {
+  border-color: var(--success-state);
 }
