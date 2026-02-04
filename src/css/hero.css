@@ -221,6 +221,7 @@
   }
 
   .hero-title {
+    margin-bottom: 128px;
     font-size: 76px;
     line-height: 76px;
     font-weight: 600;
