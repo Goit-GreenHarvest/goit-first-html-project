@@ -18,7 +18,7 @@
   font-weight: 600;
 }
 
-.title-customers {
+.reviews-title-customers {
   color: var(--primary-color);
 }
 
@@ -95,12 +95,12 @@
 }
 
 @media (min-width: 768px) {
-  .title-first-line {
+  .reviews-title-first-line {
     display: block;
     white-space: nowrap;
   }
 
-  .title-second-line {
+  .reviews-title-second-line {
     display: block;
   }
 

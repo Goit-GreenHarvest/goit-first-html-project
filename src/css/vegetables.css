@@ -23,6 +23,7 @@
 }
 
 .vegy-descr {
+  width: 335px;
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
@@ -67,6 +68,7 @@
   }
 
   .vegy-descr {
+    width: 626px;
     font-size: 16px;
     margin-bottom: 52px;
   }

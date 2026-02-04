@@ -1,57 +1,51 @@
 .advert-section {
-  background-color: #fbfbfb;
-  padding: 40px 20px; /* Mobilde dikey padding'i biraz düşürdük */
+  background-color: var(--white);
+  padding: 40px 20px;
   display: flex;
-  justify-content: flex-start; /* Sola yaslı görünüm için */
+  justify-content: flex-start;
   text-align: start;
 }
 
-.advert-content {
-  width: auto; /* Mobilde metnin çok yayılmaması için */
-}
-
-.discount-text {
+.advert-discount-text {
   font-weight: 600;
-  font-size: 38px; /* Mobilde çok büyük kaçmaması için ideal boyut */
-  color: #141414;
-  line-height: 1.1; /* Harflerin birbirine girmemesi için hafif artırıldı */
+  font-size: 48px;
+  color: var(--black);
+  line-height: 52px;
   margin: 0;
   text-align: left;
-  letter-spacing: -0.04em; /* Tasarımdaki o sıkışık görünüm için */
-  text-transform: uppercase;
+  letter-spacing: -0.04em;
 }
 
 .span-advert-text {
-  background-color: #576f35;
-  color: #fbfbfb;
+  background-color: var(--primary-color);
+  color: var(--white);
   padding: 4px 12px;
   border-radius: 8px;
   display: inline-block;
-  margin-bottom: 8px; /* Alt metinle arasına mesafe */
-  font-size: 38px; /* Üstteki text ile aynı boyutta olması için */
+  margin-bottom: 8px;
+  font-size: 38px;
 }
 
 @media (min-width: 768px) {
   .advert-section {
     padding: 100px 32px;
     display: flex;
-    justify-content: flex-start; /* İçeriği sola yaslar */
+    justify-content: flex-start;
   }
 
   .advert-content {
-    /* Görseldeki gibi metnin belirli bir noktadan kırılması için */
     max-width: 700px;
   }
 
   .discount-text {
     font-size: 64px;
     line-height: 1.09;
-    letter-spacing: -0.04em; /* Sıkışık görünümü korumak için */
+    letter-spacing: -0.04em;
     text-align: left;
   }
 
   .span-advert-text {
-    font-size: 64px; /* Başlık boyutuyla eşitlendi */
+    font-size: 64px;
     padding: 4px 16px;
     margin-bottom: 12px;
     border-radius: 12px;
@@ -60,20 +54,19 @@
 
 @media (min-width: 1200px) {
   .advert-section {
-    padding: 100px; /* Geniş ekranlarda ferah boşluk */
+    padding: 100px;
     display: flex;
-    justify-content: center; /* İçeriği merkeze odaklamak için */
+    justify-content: center;
   }
 
   .advert-content {
-    /* Görseldeki gibi metnin tek satırda uzaması için genişliği artırıyoruz */
     max-width: 1240px;
     width: 100%;
   }
 
   .discount-text {
     font-size: 76px;
-    line-height: 1.05; /* Büyük fontta satır arasını biraz daha daraltabiliriz */
+    line-height: 1.05;
     letter-spacing: -0.04em;
     text-align: left;
   }
@@ -81,8 +74,8 @@
   .span-advert-text {
     font-size: 76px;
     padding: 8px 24px;
-    margin-right: 15px; /* "TASTE" kelimesiyle arasına boşluk */
-    margin-bottom: 0; /* Masaüstünde yan yana durmaları için alt boşluğu sıfırlayabiliriz */
+    margin-right: 15px;
+    margin-bottom: 0;
     border-radius: 16px;
     vertical-align: middle;
   }
